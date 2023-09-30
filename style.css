@@ -1,0 +1,73 @@
+/* yaha pe default margin padding sare element ke paas hota hai to usee 0 kare  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: #000;
+}
+.calculator{
+    width: 100%;
+    /* vh- view height  */
+    min-height: 90vh;
+    background: rgb(236, 231, 231);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* 400px se jada nahi lega  */
+    max-width: 400px ;
+    /* center me lane ke liye top bottom 30px and left right auto  */
+    margin: 20px auto;
+    padding: 20px ;
+    gap: 8px ;
+    border-radius: 8px ;
+}
+
+.calculator .output{
+    background-color: #021924;
+    grid-column: 1/5 ;
+    color: rgb(232, 224, 224);
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center ;
+    font-size: 40px ;
+    padding: 20px ;
+    border-radius: 4px ;
+    /* jab jada no of numbers ho to display ke bahar na aa jaye isiliye  */
+    word-break: break-all;
+    word-wrap: break-word;
+
+}
+
+.calculator button{
+    font-size: 20px ;
+    font-weight: 600;
+    border: none;
+    background: none ;
+    box-shadow: 0px 0px 8px #e6b3b3;
+    border-radius: 8px ;
+    cursor: pointer;
+    /* to slow hover  */
+    transition: all 0.2s ease;
+
+}
+
+.calculator button:hover{
+    background: #e48e79;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.calculator button:last-child{
+    background: #fb7c14;
+    color: white;
+}
+.calculator button.span-two:hover{
+    background: #e6bebe;
+}
+
+
